@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "The triggering event was {{ $github.event_name }}"
-          echo "The current branch is {{ $github.ref }}"
+          echo "The triggering event was ${{ github.event_name }}"
+          echo "The current branch is ${{ github.ref }}"
       - uses: actions/checkout@v3.3.0
 
       - name: List files
         run : |
-            echo "This repository, {{ $github.repository }}, contains the following files: "
+            echo "This repository, ${{ github.repository }}, contains the following files: "
             tree
     
     
